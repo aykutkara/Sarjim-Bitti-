@@ -29,34 +29,36 @@ namespace GPProje
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.oyuna_basla = new System.Windows.Forms.Button();
+            this.nasil_oynanir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // oyuna_basla
             // 
-            this.button1.Location = new System.Drawing.Point(321, 274);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "BUTON";
-            this.button1.UseVisualStyleBackColor = true;
+            this.oyuna_basla.Location = new System.Drawing.Point(114, 166);
+            this.oyuna_basla.Name = "oyuna_basla";
+            this.oyuna_basla.Size = new System.Drawing.Size(131, 31);
+            this.oyuna_basla.TabIndex = 0;
+            this.oyuna_basla.Text = "OYUNA BAŞLA";
+            this.oyuna_basla.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // nasil_oynanir
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(332, 116);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 1;
+            this.nasil_oynanir.Location = new System.Drawing.Point(114, 249);
+            this.nasil_oynanir.Name = "nasil_oynanir";
+            this.nasil_oynanir.Size = new System.Drawing.Size(131, 31);
+            this.nasil_oynanir.TabIndex = 1;
+            this.nasil_oynanir.Text = "Nasıl Oynanır";
+            this.nasil_oynanir.UseVisualStyleBackColor = true;
+            this.nasil_oynanir.Click += new System.EventHandler(this.nasil_oynanir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(358, 414);
+            this.Controls.Add(this.nasil_oynanir);
+            this.Controls.Add(this.oyuna_basla);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -65,8 +67,8 @@ namespace GPProje
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button oyuna_basla;
+        private System.Windows.Forms.Button nasil_oynanir;
     }
 }
 

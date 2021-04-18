@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GPProje
 {
-    public partial class Form1 : Form
+    public partial class Nasil_oynanir : Form
     {
-        public Form1()
+        public Nasil_oynanir()
         {
             InitializeComponent();
-        }
-
-        private void nasil_oynanir_Click(object sender, EventArgs e)
-        {
-            Nasil_oynanir nasloynanir = new Nasil_oynanir();
-            nasloynanir.Show();
         }
     }
 }
