@@ -29,6 +29,7 @@ namespace GPProje
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.oyuna_basla = new System.Windows.Forms.Button();
             this.nasil_oynanir = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,7 +60,9 @@ namespace GPProje
             this.ClientSize = new System.Drawing.Size(358, 414);
             this.Controls.Add(this.nasil_oynanir);
             this.Controls.Add(this.oyuna_basla);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 

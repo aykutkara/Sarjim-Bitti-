@@ -32,7 +32,8 @@ namespace GPProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nasil_oynanir));
             this.nsloynanir_lbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nsloynanir_txt = new System.Windows.Forms.TextBox();
+            this.aciklama_lbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,17 +57,25 @@ namespace GPProje
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // nsloynanir_txt
+            // aciklama_lbl
             // 
-            this.nsloynanir_txt.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.nsloynanir_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nsloynanir_txt.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsloynanir_txt.Location = new System.Drawing.Point(35, 306);
-            this.nsloynanir_txt.Multiline = true;
-            this.nsloynanir_txt.Name = "nsloynanir_txt";
-            this.nsloynanir_txt.Size = new System.Drawing.Size(594, 131);
-            this.nsloynanir_txt.TabIndex = 3;
-            this.nsloynanir_txt.Text = "Oyunculardan katogrilere göre";
+            this.aciklama_lbl.AutoSize = true;
+            this.aciklama_lbl.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aciklama_lbl.Location = new System.Drawing.Point(32, 305);
+            this.aciklama_lbl.Name = "aciklama_lbl";
+            this.aciklama_lbl.Size = new System.Drawing.Size(369, 16);
+            this.aciklama_lbl.TabIndex = 3;
+            this.aciklama_lbl.Text = "Oyunculardan istenilen katogorideki elimeleri bulmaları istenir.";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(487, 406);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "KAPAT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nasil_oynanir
             // 
@@ -74,11 +83,17 @@ namespace GPProje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(643, 459);
-            this.Controls.Add(this.nsloynanir_txt);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.aciklama_lbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nsloynanir_lbl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Nasil_oynanir";
-            this.Text = "Nasil_oynanir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NASIL OYNANIR ?";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,6 +104,7 @@ namespace GPProje
 
         private System.Windows.Forms.Label nsloynanir_lbl;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox nsloynanir_txt;
+        private System.Windows.Forms.Label aciklama_lbl;
+        private System.Windows.Forms.Button button1;
     }
 }

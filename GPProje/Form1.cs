@@ -21,6 +21,7 @@ namespace GPProje
         {
             Nasil_oynanir nasloynanir = new Nasil_oynanir();
             nasloynanir.Show();
+            this.Hide();
         }
     }
 }
