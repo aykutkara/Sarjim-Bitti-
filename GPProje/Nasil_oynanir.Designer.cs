@@ -32,7 +32,7 @@ namespace GPProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nasil_oynanir));
             this.nsloynanir_lbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.aciklama_lbl = new System.Windows.Forms.Label();
+            this.lbl_aciklama = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,15 +57,16 @@ namespace GPProje
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // aciklama_lbl
+            // lbl_aciklama
             // 
-            this.aciklama_lbl.AutoSize = true;
-            this.aciklama_lbl.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aciklama_lbl.Location = new System.Drawing.Point(32, 305);
-            this.aciklama_lbl.Name = "aciklama_lbl";
-            this.aciklama_lbl.Size = new System.Drawing.Size(369, 16);
-            this.aciklama_lbl.TabIndex = 3;
-            this.aciklama_lbl.Text = "Oyunculardan istenilen katogorideki elimeleri bulmaları istenir.";
+            this.lbl_aciklama.AutoSize = true;
+            this.lbl_aciklama.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_aciklama.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_aciklama.Location = new System.Drawing.Point(32, 305);
+            this.lbl_aciklama.Name = "lbl_aciklama";
+            this.lbl_aciklama.Size = new System.Drawing.Size(508, 96);
+            this.lbl_aciklama.TabIndex = 3;
+            this.lbl_aciklama.Text = resources.GetString("lbl_aciklama.Text");
             // 
             // button1
             // 
@@ -85,7 +86,7 @@ namespace GPProje
             this.ClientSize = new System.Drawing.Size(643, 459);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.aciklama_lbl);
+            this.Controls.Add(this.lbl_aciklama);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nsloynanir_lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -104,7 +105,7 @@ namespace GPProje
 
         private System.Windows.Forms.Label nsloynanir_lbl;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label aciklama_lbl;
+        private System.Windows.Forms.Label lbl_aciklama;
         private System.Windows.Forms.Button button1;
     }
 }
