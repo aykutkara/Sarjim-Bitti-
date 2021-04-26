@@ -36,31 +36,37 @@ namespace GPProje
             // 
             // oyuna_basla
             // 
+            this.oyuna_basla.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.oyuna_basla.Location = new System.Drawing.Point(114, 166);
             this.oyuna_basla.Name = "oyuna_basla";
             this.oyuna_basla.Size = new System.Drawing.Size(131, 31);
             this.oyuna_basla.TabIndex = 0;
             this.oyuna_basla.Text = "OYUNA BAŞLA";
-            this.oyuna_basla.UseVisualStyleBackColor = true;
+            this.oyuna_basla.UseVisualStyleBackColor = false;
+            this.oyuna_basla.Click += new System.EventHandler(this.oyuna_basla_Click);
             // 
             // nasil_oynanir
             // 
+            this.nasil_oynanir.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.nasil_oynanir.Location = new System.Drawing.Point(114, 249);
             this.nasil_oynanir.Name = "nasil_oynanir";
             this.nasil_oynanir.Size = new System.Drawing.Size(131, 31);
             this.nasil_oynanir.TabIndex = 1;
             this.nasil_oynanir.Text = "Nasıl Oynanır";
-            this.nasil_oynanir.UseVisualStyleBackColor = true;
+            this.nasil_oynanir.UseVisualStyleBackColor = false;
             this.nasil_oynanir.Click += new System.EventHandler(this.nasil_oynanir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(358, 414);
             this.Controls.Add(this.nasil_oynanir);
             this.Controls.Add(this.oyuna_basla);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ŞARJIM BİTTİ !!";

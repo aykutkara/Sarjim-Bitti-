@@ -16,12 +16,21 @@ namespace GPProje
         {
             InitializeComponent();
         }
-
+   
         private void nasil_oynanir_Click(object sender, EventArgs e)
         {
             Nasil_oynanir nasloynanir = new Nasil_oynanir();
             nasloynanir.Show();
             this.Hide();
+        }
+
+        private void oyuna_basla_Click(object sender, EventArgs e)
+        {
+            OyunEkrani basla = new OyunEkrani();
+            basla.Show();
+            basla.KelimeVeKategori();
+            //this.Hide();
+
         }
     }
 }
