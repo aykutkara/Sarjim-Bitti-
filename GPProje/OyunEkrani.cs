@@ -17,8 +17,11 @@ namespace GPProje
             InitializeComponent();
 
         }
+
         public static string str;
-        public static char[] kelimeuzunlugu;  
+        public static char[] kelimeuzunlugu;
+        public int sayac ;
+        int pilcubugu = 6;
         public void KelimeVeKategori()
         {
             string[,] katagorivekelimeler = new string[3, 7]
@@ -33,13 +36,14 @@ namespace GPProje
             int kelime = rnd.Next(0, 7);
             int kategori = rnd.Next(0, 3);
             lbl_kelime.Text = "";
-            int sayac;
             string secilenkelime ="";
+            lbl_girilenharfler.Text = "";
 
             if (kategori == 0)
             {
                 secilenkelime = katagorivekelimeler[0, kelime];
                 MessageBox.Show(secilenkelime);
+
                 lbl_kategori.Text = "Bu Bir Şehir";
                 kelimeuzunlugu = new char[katagorivekelimeler[0, kelime].Length];
                 sayac = kelimeuzunlugu.Length;
@@ -60,10 +64,10 @@ namespace GPProje
                 secilenkelime = katagorivekelimeler[1, kelime];
                 MessageBox.Show(secilenkelime);
 
-
-
                 lbl_kategori.Text = "Bu Bir Ülke";
                 kelimeuzunlugu = new char[katagorivekelimeler[1, kelime].Length];
+                sayac = kelimeuzunlugu.Length;
+
                 for (int i = 0; i < kelimeuzunlugu.Length; i++)
                 {
                     kelimeuzunlugu[i] = '_';
@@ -82,9 +86,10 @@ namespace GPProje
                 secilenkelime = katagorivekelimeler[2, kelime];
                 MessageBox.Show(secilenkelime);
 
-
                 lbl_kategori.Text = "Bu Bir Araba Markası";
                 kelimeuzunlugu = new char[katagorivekelimeler[2, kelime].Length];
+                sayac = kelimeuzunlugu.Length;
+
                 for (int i = 0; i < kelimeuzunlugu.Length; i++)
                 {
                     kelimeuzunlugu[i] = '_';
@@ -100,7 +105,8 @@ namespace GPProje
             str = secilenkelime;
             
         }
-        public int sayac = 0;
+
+        
 
         public void Islemler()
         {
@@ -108,51 +114,89 @@ namespace GPProje
 
             string girilentext = textBox1.Text.ToUpper();
             char girilenharf = Convert.ToChar(girilentext);
+            lbl_girilenharfler.Text += girilentext;
 
             int a = 0;
             char[] girilenharfkontrol = new char[secilenkelime.Length];
 
-            for (int i = 0; i < girilenharfkontrol.Length; i++)
-            {
-                if (girilenharf == girilenharfkontrol[i])
-                {
-                    MessageBox.Show("Bu harf girildi.");
-                }
-                else
-                {
-                    break;
-                }
-            }
-            for (int i = 0; i < 1; i++)
-            {
+            //for (int i = 0; i < 1; i++)
+            //{
 
-                girilenharfkontrol[a] = girilenharf;
-                a++;
-            }
+            //    girilenharfkontrol[a] = girilenharf;
+            //    a++;
+            //}
+            //for (int i = 0; i < girilenharfkontrol.Length; i++)
+            //{
+            //    if (girilenharf == girilenharfkontrol[i])
+            //    {
+            //        MessageBox.Show("Bu harf girildi.");
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
+
+            bool var_mi = false;
+
             for (int i = 0; i < secilenkelime.Length; i++)
             {
                 if (girilenharf == secilenkelime[i])
                 {
+                    var_mi = true;
                     kelimeuzunlugu[i] = girilenharf;
                     //burda kaldım. burda kelimeuzunluğu[i] yi lblkelime ye eşitleyip _ ile yer değiştirmemiz lazım
+                    lbl_kelime.Text = lbl_kelime.Text.Remove(i*2,1);
+                    lbl_kelime.Text = lbl_kelime.Text.Insert(i * 2, girilenharf.ToString()).ToUpper();
+
                     sayac--;
                     
                     if (sayac == 0)
                     {
                         lbl_kelime.Text = secilenkelime;
                         MessageBox.Show(secilenkelime+ "\nOyunu Kazandınız.");
-                        
+                        sonraki_bolum();
                     }
-
-
-
                 }
-
             }
-
+            if (!var_mi)
+            {
+                pilcubugu--;
+                switch (pilcubugu)
+                {
+                    case 1:
+                        pcb_pil.ImageLocation = @"resimler\bos_pil.jpg";
+                        MessageBox.Show("Cevap : " + secilenkelime + "\nOyunu Kaybettin!");
+                        
+                        break;
+                    case 2:
+                        pcb_pil.ImageLocation = @"resimler\2_pil.jpg";
+                        break;
+                    case 3:
+                        pcb_pil.ImageLocation = @"resimler\3_pil.jpg";
+                        break;
+                    case 4:
+                        pcb_pil.ImageLocation = @"resimler\4_pil.jpg";
+                        break;
+                    case 5:
+                        pcb_pil.ImageLocation = @"resimler\5_pil.jpg";
+                        break;
+                }
+            }
         }
-
-
+        private void sonraki_bolum()
+        {
+            Temizle();
+            KelimeVeKategori();
+        }
+        private void Temizle()
+        {
+            pilcubugu = 6;
+            lbl_kategori.Text = "";
+            lbl_kelime.Text = "";
+            lbl_girilenharfler.Text = "";
+            textBox1.Text = "";
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -180,10 +224,9 @@ namespace GPProje
         }
         private void btn_harfgir_Click(object sender, EventArgs e)
         {
+
             Islemler();
 
-
-            //pcb_pil.ImageLocation = @"resimler\5_pil.jpg";
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
