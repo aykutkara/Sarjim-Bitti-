@@ -155,7 +155,7 @@ namespace GPProje
                     {
                         lbl_kelime.Text = secilenkelime;
                         MessageBox.Show(secilenkelime+ "\nOyunu Kazandınız.");
-                        DialogResult secenek = MessageBox.Show("Tekrar Oynamak İstiyor musunuz ?", "Tebrikler", MessageBoxButtons.YesNo);
+                        DialogResult secenek = MessageBox.Show("Tekrar Oynamak İstiyor musunuz ?", "Tebrikler", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (secenek == DialogResult.Yes)
                         {
                             sonraki_bolum();
