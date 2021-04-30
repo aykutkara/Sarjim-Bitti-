@@ -155,10 +155,20 @@ namespace GPProje
                     {
                         lbl_kelime.Text = secilenkelime;
                         MessageBox.Show(secilenkelime+ "\nOyunu Kazandınız.");
-                        sonraki_bolum();
+                        DialogResult secenek = MessageBox.Show("Tekrar Oynamak İstiyor musunuz ?", "Tebrikler", MessageBoxButtons.YesNo);
+                        if (secenek == DialogResult.Yes)
+                        {
+                            sonraki_bolum();
+                        }
+                        else if (secenek == DialogResult.No)
+                        {
+                            this.Close();
+                        }
+                       
                     }
                 }
             }
+            
             if (!var_mi)
             {
                 pilcubugu--;
@@ -167,6 +177,7 @@ namespace GPProje
                     case 1:
                         pcb_pil.ImageLocation = @"resimler\bos_pil.jpg";
                         MessageBox.Show("Cevap : " + secilenkelime + "\nOyunu Kaybettin!");
+                        this.Close();
                         
                         break;
                     case 2:
