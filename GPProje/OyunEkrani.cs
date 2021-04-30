@@ -191,6 +191,7 @@ namespace GPProje
         }
         private void Temizle()
         {
+            pcb_pil.ImageLocation = @"resimler\ful_pil.jpg";
             pilcubugu = 6;
             lbl_kategori.Text = "";
             lbl_kelime.Text = "";
