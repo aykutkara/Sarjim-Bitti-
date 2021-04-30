@@ -36,7 +36,7 @@ namespace GPProje
             // 
             // oyuna_basla
             // 
-            this.oyuna_basla.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.oyuna_basla.BackColor = System.Drawing.Color.White;
             this.oyuna_basla.Location = new System.Drawing.Point(114, 166);
             this.oyuna_basla.Name = "oyuna_basla";
             this.oyuna_basla.Size = new System.Drawing.Size(131, 31);
@@ -47,7 +47,7 @@ namespace GPProje
             // 
             // nasil_oynanir
             // 
-            this.nasil_oynanir.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.nasil_oynanir.BackColor = System.Drawing.Color.White;
             this.nasil_oynanir.Location = new System.Drawing.Point(114, 249);
             this.nasil_oynanir.Name = "nasil_oynanir";
             this.nasil_oynanir.Size = new System.Drawing.Size(131, 31);
@@ -60,7 +60,7 @@ namespace GPProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(358, 414);
             this.Controls.Add(this.nasil_oynanir);
             this.Controls.Add(this.oyuna_basla);

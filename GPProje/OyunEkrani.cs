@@ -227,6 +227,7 @@ namespace GPProje
         {
 
             Islemler();
+            textBox1.Clear();
 
         }
 
