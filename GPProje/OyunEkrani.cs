@@ -18,113 +18,93 @@ namespace GPProje
 
         }
 
-        public static string str;
-        public static char[] kelimeuzunlugu;
-        public int sayac ;
-        int pilcubugu = 6;
+        public static string str; //bu değişkeni, "KelimeVeKatagori" metodundaki "secilenkelime" değişkenini "Islemler" metoduna taşıyabilmek için oluşturduk.
+        public static char[] kelimeuzunlugu;//bu char dizisini,secilen kelimenin uzunluğu kadar label da "_" koymak için oluşturduk.
+        public int sayac ;//bu değişkeni, "kelimeuzunluğu" değişkeninin uzunluğuna eşitleyip kullanıcı her bildiğinde azaltıp oyunu kazanıp kazanmadığını kontrol etmek için oluşturduk.
+        int pilcubugu = 6;//bu değişkeni, kullanıcı her yanlış tahmin yaptığında pil görselindeki çubuğu azaltmak için oluşturduk.
+        
         public void KelimeVeKategori()
         {
-            string[,] katagorivekelimeler = new string[3, 7]
+            string[,] katagorivekelimeler = new string[3, 7] //bu dizide, katagori ve kelimeleri belirledik.(0-7 arası şehirler, 1-7 arası ülkeler, 2-7 arası araba markaları)
             {
                 { "ANKARA", "İSTANBUL", "İZMİR", "BURSA", "BALIKESİR", "CANAKKALE", "KONYA" ,} ,
                 {"TÜRKİYE","ALMANYA","AMERİKA","İSPANYA","İTALYA","YUNANİSTAN","RUSYA" } ,
                 { "FORD", "FIAT", "PEUGEOT", "MERCEDES", "VOLVO", "HONDA", "AUDI" }
             };
 
-            Random rnd = new Random();
-            Random rnd2 = new Random();
-            int kelime = rnd.Next(0, 7);
-            int kategori = rnd.Next(0, 3);
-            lbl_kelime.Text = "";
-            string secilenkelime ="";
-            lbl_girilenharfler.Text = "";
+            Random rnd = new Random(); // Random sınıfındaki bu örneği kelime ve katagoriyi rastgele seçmek için oluşturduk.
+            int kelime = rnd.Next(0, 7); //bu değişkeni, rastgele seçilecek olan kelimenin dizinin kaçıncı elemanı olacağını belirlemek için oluşturduk.
+            int kategori = rnd.Next(0, 3);//bu değişkeni, rastgele seçilecek olan katagorinin dizinin kaçıncı elemanı olacağını belirlemek için oluşturduk.
+            lbl_kelime.Text = "";//metodu çağırdığımızda "lbl_kelime" nin textinde hiç bişey yazmasın diye yazdık.
+            string secilenkelime ="";//bu değişkeni, random olarak seçilecek kelimeye atamak için oluşturduk.
+            lbl_girilenharfler.Text = "";//metodu çağırdığımızda "lbl_girilenharfler" in textinde hiç bişey yazmasın diye yazdık.
 
-            if (kategori == 0)
+            if (kategori == 0)//random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[0, kelime];
+                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
                 MessageBox.Show(secilenkelime);
-
-                lbl_kategori.Text = "Bu Bir Şehir";
-                kelimeuzunlugu = new char[katagorivekelimeler[0, kelime].Length];
+                lbl_kategori.Text = "Bu Bir Şehir";//bu if bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
+                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
                 {
                     kelimeuzunlugu[i] = '_';
 
                 }
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,  label da kelimenin harfleri görünmesin onun yerine kelimenin harf sayısı kadar "_" yazdıralım diye oluşturduk.
                 {
                     lbl_kelime.Text += kelimeuzunlugu[i].ToString() + " ";
                 }
                 
             }
-            else if (kategori == 1)
+            else if (kategori == 1)//random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[1, kelime];
+                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
                 MessageBox.Show(secilenkelime);
-
-                lbl_kategori.Text = "Bu Bir Ülke";
-                kelimeuzunlugu = new char[katagorivekelimeler[1, kelime].Length];
+                lbl_kategori.Text = "Bu Bir Ülke";//bu else if bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
+                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
                 {
                     kelimeuzunlugu[i] = '_';
 
                 }
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,  label da kelimenin harfleri görünmesin onun yerine kelimenin harf sayısı kadar "_" yazdıralım diye oluşturduk.
                 {
                     lbl_kelime.Text += kelimeuzunlugu[i].ToString() + " ";
                 }
-                
-
-
             }
-            else
+            else //random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[2, kelime];
+                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
                 MessageBox.Show(secilenkelime);
-
-                lbl_kategori.Text = "Bu Bir Araba Markası";
-                kelimeuzunlugu = new char[katagorivekelimeler[2, kelime].Length];
+                lbl_kategori.Text = "Bu Bir Araba Markası";//bu else bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
+                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
                 {
                     kelimeuzunlugu[i] = '_';
 
                 }
-                for (int i = 0; i < kelimeuzunlugu.Length; i++)
+                for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü, label da kelimenin harfleri görünmesin onun yerine kelimenin harf sayısı kadar "_" yazdıralım diye oluşturduk.
                 {
                     lbl_kelime.Text += kelimeuzunlugu[i].ToString() + " ";
                 }
-                
-
             }
-            str = secilenkelime;
-            
+            str = secilenkelime;//secilenkelime yi "Islemler" metodunda kullanmak için str ye eşitledik.
         }
-
-        
 
         public void Islemler()
         {
-            string secilenkelime = str;
-
+            string secilenKelime = str;
             string girilentext = textBox1.Text.ToUpper();
             char girilenharf = Convert.ToChar(girilentext);
             lbl_girilenharfler.Text += girilentext;
-
             int a = 0;
-            char[] girilenharfkontrol = new char[secilenkelime.Length];
-
-            //for (int i = 0; i < 1; i++)
-            //{
-
-            //    girilenharfkontrol[a] = girilenharf;
-            //    a++;
-            //}
+            char[] girilenharfkontrol = new char[secilenKelime.Length];
             //for (int i = 0; i < girilenharfkontrol.Length; i++)
             //{
             //    if (girilenharf == girilenharfkontrol[i])
@@ -136,25 +116,26 @@ namespace GPProje
             //        break;
             //    }
             //}
-
+            //for (int i = 0; i < 1; i++)
+            //{
+            //    girilenharfkontrol[a] = girilenharf;
+            //    a++;
+            //}
             bool var_mi = false;
 
-            for (int i = 0; i < secilenkelime.Length; i++)
+            for (int i = 0; i < secilenKelime.Length; i++)
             {
-                if (girilenharf == secilenkelime[i])
+                if (girilenharf == secilenKelime[i])
                 {
                     var_mi = true;
                     kelimeuzunlugu[i] = girilenharf;
-                    //burda kaldım. burda kelimeuzunluğu[i] yi lblkelime ye eşitleyip _ ile yer değiştirmemiz lazım
                     lbl_kelime.Text = lbl_kelime.Text.Remove(i*2,1);
                     lbl_kelime.Text = lbl_kelime.Text.Insert(i * 2, girilenharf.ToString()).ToUpper();
-
                     sayac--;
-                    
                     if (sayac == 0)
                     {
-                        lbl_kelime.Text = secilenkelime;
-                        MessageBox.Show(secilenkelime+ "\nOyunu Kazandınız.");
+                        lbl_kelime.Text = secilenKelime;
+                        MessageBox.Show(secilenKelime+ "\nOyunu Kazandınız.");
                         DialogResult secenek = MessageBox.Show("Tekrar Oynamak İstiyor musunuz ?", "Tebrikler", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (secenek == DialogResult.Yes)
                         {
@@ -164,7 +145,6 @@ namespace GPProje
                         {
                             this.Close();
                         }
-                       
                     }
                 }
             }
@@ -176,7 +156,7 @@ namespace GPProje
                 {
                     case 1:
                         pcb_pil.ImageLocation = @"resimler\bos_pil.jpg";
-                        MessageBox.Show("Cevap : " + secilenkelime + "\nOyunu Kaybettin!");
+                        MessageBox.Show("Cevap : " + secilenKelime + "\nOyunu Kaybettin!");
                         this.Close();
                         
                         break;
@@ -195,11 +175,18 @@ namespace GPProje
                 }
             }
         }
+        /// <summary>
+        /// Bu metodu, oyuncu kelimeyi bildiği zaman formdaki değerler sıfırlansın ve yeni kelime gelsin diye oluşturduk.
+        /// </summary>
         private void sonraki_bolum()
         {
             Temizle();
             KelimeVeKategori();
         }
+
+        /// <summary>
+        /// Bu metodu, oyunu kazanıp bir sonraki bölüme geçerken veya kaybettiğinde görsel,çubuk değeri,lbl textleri,textbox texti sıfırlansın diye oluşturduk.
+        /// </summary>
         private void Temizle()
         {
             pcb_pil.ImageLocation = @"resimler\ful_pil.jpg";
@@ -210,24 +197,14 @@ namespace GPProje
             textBox1.Text = "";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pcb_pil_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//burayı girilecek değerin sadece harf olması için oluşturduk.
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//bu metodu girilecek değerin sadece harf olması için oluşturduk.
         {
             if (char.IsDigit(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == '+' || e.KeyChar == '/' || e.KeyChar == '*' || e.KeyChar == ',' || e.KeyChar == '.')
             {
                 e.Handled = true;
             }
         }
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)//bu metodu klavyeden enter a basınca otomatik olarak buton a basması için oluşturduk.
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -238,8 +215,8 @@ namespace GPProje
         {
 
             Islemler();
-            textBox1.Clear();
-
+            textBox1.Clear();//Butona bastıktan sonra kullanıcı yeni harf gireceği zaman her seferinde önce girdiğini silip yeniden yazmasın diye her tıklamaya textbox ın içindeki text i silmek için yazdık.
+            
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -253,6 +230,15 @@ namespace GPProje
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pcb_pil_Click(object sender, EventArgs e)
         {
 
         }

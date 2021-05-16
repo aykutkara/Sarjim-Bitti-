@@ -16,7 +16,12 @@ namespace GPProje
         {
             InitializeComponent();
         }
-   
+        /// <summary>
+        /// Bu buton metodunu oyunun mantığını bilmeyen biri oyuna girdiği zaman 
+        /// nasıl oynayacağını öğrenmesi için "Nasil_oynanir" formunu açmak için oluşturduk
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nasil_oynanir_Click(object sender, EventArgs e)
         {
             Nasil_oynanir nasloynanir = new Nasil_oynanir();
@@ -24,13 +29,16 @@ namespace GPProje
             this.Hide();
         }
 
+        /// <summary>
+        /// Bu metodu butona basınca oyun başlasın ve "OyunEkrani" formuna geçsin diye oluşturduk.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void oyuna_basla_Click(object sender, EventArgs e)
         {
             OyunEkrani basla = new OyunEkrani();
             basla.Show();
-            basla.KelimeVeKategori();
-            //this.Hide();
-
+            basla.KelimeVeKategori(); //bu satırı butona tıklayınca direkt oyun başlayacağı için katagori ve kelimeyi seçsin diye yazdık.
         }
     }
 }
