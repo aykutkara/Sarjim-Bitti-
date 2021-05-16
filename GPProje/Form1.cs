@@ -40,5 +40,10 @@ namespace GPProje
             basla.Show();
             basla.KelimeVeKategori(); //bu satırı butona tıklayınca direkt oyun başlayacağı için katagori ve kelimeyi seçsin diye yazdık.
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

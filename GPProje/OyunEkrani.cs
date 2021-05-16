@@ -99,11 +99,23 @@ namespace GPProje
 
         public void Islemler()
         {
+            
             string secilenKelime = str;
             string girilentext = textBox1.Text.ToUpper();
-            char girilenharf = Convert.ToChar(girilentext);
+            char girilenharf = ' ';
+            if (girilentext == "")
+            {
+                MessageBox.Show("Boş bırakamazsınız");
+                return;
+                
+            }
+            else
+            {
+                girilenharf = Convert.ToChar(girilentext);
+            }
+            
             lbl_girilenharfler.Text += girilentext;
-            int a = 0;
+            
             char[] girilenharfkontrol = new char[secilenKelime.Length];
             //for (int i = 0; i < girilenharfkontrol.Length; i++)
             //{
@@ -123,7 +135,7 @@ namespace GPProje
             //}
             bool var_mi = false;
 
-            for (int i = 0; i < secilenKelime.Length; i++)
+            for (int i = 0; i < secilenKelime.Length; i++) //*
             {
                 if (girilenharf == secilenKelime[i])
                 {
@@ -131,6 +143,7 @@ namespace GPProje
                     kelimeuzunlugu[i] = girilenharf;
                     lbl_kelime.Text = lbl_kelime.Text.Remove(i*2,1);
                     lbl_kelime.Text = lbl_kelime.Text.Insert(i * 2, girilenharf.ToString()).ToUpper();
+                    secilenKelime.Remove(i);
                     sayac--;
                     if (sayac == 0)
                     {
@@ -147,6 +160,8 @@ namespace GPProje
                         }
                     }
                 }
+
+                
             }
             
             if (!var_mi)
