@@ -37,6 +37,7 @@ namespace GPProje
             this.btn_harfgir = new System.Windows.Forms.Button();
             this.pcb_pil = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_pil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,29 +45,32 @@ namespace GPProje
             // lbl_kategori
             // 
             this.lbl_kategori.AutoSize = true;
+            this.lbl_kategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_kategori.Location = new System.Drawing.Point(12, 40);
             this.lbl_kategori.Name = "lbl_kategori";
-            this.lbl_kategori.Size = new System.Drawing.Size(46, 13);
+            this.lbl_kategori.Size = new System.Drawing.Size(79, 24);
             this.lbl_kategori.TabIndex = 7;
             this.lbl_kategori.Text = "Kategori";
             // 
             // lbl_kelime
             // 
             this.lbl_kelime.AutoSize = true;
+            this.lbl_kelime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_kelime.Location = new System.Drawing.Point(12, 84);
             this.lbl_kelime.Name = "lbl_kelime";
-            this.lbl_kelime.Size = new System.Drawing.Size(38, 13);
+            this.lbl_kelime.Size = new System.Drawing.Size(56, 20);
             this.lbl_kelime.TabIndex = 8;
             this.lbl_kelime.Text = "Kelime";
             // 
             // lbl_girilenharfler
             // 
             this.lbl_girilenharfler.AutoSize = true;
-            this.lbl_girilenharfler.Location = new System.Drawing.Point(15, 265);
+            this.lbl_girilenharfler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_girilenharfler.Location = new System.Drawing.Point(16, 274);
             this.lbl_girilenharfler.Name = "lbl_girilenharfler";
-            this.lbl_girilenharfler.Size = new System.Drawing.Size(70, 13);
+            this.lbl_girilenharfler.Size = new System.Drawing.Size(57, 15);
             this.lbl_girilenharfler.TabIndex = 9;
-            this.lbl_girilenharfler.Text = "Girilen Harfler";
+            this.lbl_girilenharfler.Text = "Girilenler";
             // 
             // textBox1
             // 
@@ -103,6 +107,7 @@ namespace GPProje
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl1);
             this.panel1.Controls.Add(this.pcb_pil);
             this.panel1.Controls.Add(this.btn_harfgir);
             this.panel1.Controls.Add(this.textBox1);
@@ -114,6 +119,16 @@ namespace GPProje
             this.panel1.Size = new System.Drawing.Size(541, 450);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1.Location = new System.Drawing.Point(15, 243);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(118, 20);
+            this.lbl1.TabIndex = 12;
+            this.lbl1.Text = "Girilen Harfler : ";
             // 
             // OyunEkrani
             // 
@@ -145,5 +160,6 @@ namespace GPProje
         private System.Windows.Forms.Button btn_harfgir;
         private System.Windows.Forms.PictureBox pcb_pil;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl1;
     }
 }

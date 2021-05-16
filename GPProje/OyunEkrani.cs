@@ -175,6 +175,7 @@ namespace GPProje
                 }
             }
         }
+
         /// <summary>
         /// Bu metodu, oyuncu kelimeyi bildiği zaman formdaki değerler sıfırlansın ve yeni kelime gelsin diye oluşturduk.
         /// </summary>
