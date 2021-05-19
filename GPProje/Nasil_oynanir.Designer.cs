@@ -40,7 +40,9 @@ namespace GPProje
             // nsloynanir_lbl
             // 
             this.nsloynanir_lbl.AutoSize = true;
+            this.nsloynanir_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.nsloynanir_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nsloynanir_lbl.ForeColor = System.Drawing.SystemColors.Window;
             this.nsloynanir_lbl.Location = new System.Drawing.Point(31, 270);
             this.nsloynanir_lbl.Name = "nsloynanir_lbl";
             this.nsloynanir_lbl.Size = new System.Drawing.Size(147, 19);
@@ -60,6 +62,7 @@ namespace GPProje
             // lbl_aciklama
             // 
             this.lbl_aciklama.AutoSize = true;
+            this.lbl_aciklama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.lbl_aciklama.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aciklama.ForeColor = System.Drawing.SystemColors.Window;
             this.lbl_aciklama.Location = new System.Drawing.Point(32, 305);
@@ -83,6 +86,7 @@ namespace GPProje
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackgroundImage = global::GPProje.Properties.Resources.arkpln;
             this.ClientSize = new System.Drawing.Size(643, 459);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
