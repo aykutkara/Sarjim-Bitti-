@@ -73,12 +73,14 @@ namespace GPProje
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(487, 406);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "KAPAT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nasil_oynanir

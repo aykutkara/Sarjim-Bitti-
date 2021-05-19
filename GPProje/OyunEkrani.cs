@@ -136,7 +136,6 @@ namespace GPProje
                     kelimeuzunlugu[i] = girilenharf;//girilen harf kelimede bulunduğu için "kelimeuzunluğu" değişkeninin o an ki i. değerini "_" yerine girilen harfe eşitledik.
                     lbl_kelime.Text = lbl_kelime.Text.Remove(i * 2, 1);//formdaki label dan "_" yi sildik.
                     lbl_kelime.Text = lbl_kelime.Text.Insert(i * 2, girilenharf.ToString()).ToUpper();//formdaki label ın sildiğimiz yerine girilen harfi yazdırdık. 
-                    secilenKelime.Remove(i);
                     sayac--; //kullanıcı her bildiğinde sayacı azaltıyoruz ki kaç tane bilmesi gereken harf kaldı belli olsun.
                     if (sayac == 0)//sayac sıfırlanınca bilmediği hiç harf kalmadığı için oyunu kazanmış oluyor.
                     {

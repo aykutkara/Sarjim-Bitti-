@@ -68,6 +68,7 @@ namespace GPProje
             // btn_harfgir
             // 
             this.btn_harfgir.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_harfgir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_harfgir.Location = new System.Drawing.Point(169, 207);
             this.btn_harfgir.Name = "btn_harfgir";
             this.btn_harfgir.Size = new System.Drawing.Size(109, 26);

@@ -38,7 +38,8 @@ namespace GPProje
             // 
             // oyuna_basla
             // 
-            this.oyuna_basla.BackColor = System.Drawing.SystemColors.Info;
+            this.oyuna_basla.BackColor = System.Drawing.Color.DarkOrange;
+            this.oyuna_basla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oyuna_basla.Location = new System.Drawing.Point(114, 166);
             this.oyuna_basla.Name = "oyuna_basla";
             this.oyuna_basla.Size = new System.Drawing.Size(131, 31);
@@ -49,7 +50,8 @@ namespace GPProje
             // 
             // nasil_oynanir
             // 
-            this.nasil_oynanir.BackColor = System.Drawing.SystemColors.Info;
+            this.nasil_oynanir.BackColor = System.Drawing.Color.DarkOrange;
+            this.nasil_oynanir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nasil_oynanir.Location = new System.Drawing.Point(114, 249);
             this.nasil_oynanir.Name = "nasil_oynanir";
             this.nasil_oynanir.Size = new System.Drawing.Size(131, 31);
