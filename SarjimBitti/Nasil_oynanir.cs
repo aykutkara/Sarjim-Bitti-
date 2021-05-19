@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GPProje
+namespace SarjimBitti
 {
     public partial class Nasil_oynanir : Form
     {
@@ -16,7 +16,11 @@ namespace GPProje
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Bu buton metodunu "Nasil_oynanir"formunu kapatıp ana forma(Form1) dönmek için oluşturduk.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{856BBE04-B49E-438F-85BB-5037FB90EACF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GPProje</RootNamespace>
-    <AssemblyName>GPProje</AssemblyName>
+    <RootNamespace>SarjimBitti</RootNamespace>
+    <AssemblyName>SarjimBitti</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

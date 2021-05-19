@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GPProje
+namespace SarjimBitti
 {
     public partial class OyunEkrani : Form
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace GPProje
+namespace SarjimBitti
 {
     partial class OyunEkrani
     {
@@ -130,7 +130,7 @@ namespace GPProje
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.pictureBox1.BackgroundImage = global::GPProje.Properties.Resources.arkpln;
+            this.pictureBox1.BackgroundImage = global::SarjimBitti.Properties.Resources.arkpln;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(567, 480);

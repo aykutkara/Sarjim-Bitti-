@@ -1,5 +1,5 @@
 ﻿
-namespace GPProje
+namespace SarjimBitti
 {
     partial class Form1
     {
@@ -62,7 +62,7 @@ namespace GPProje
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GPProje.Properties.Resources.arkpln;
+            this.pictureBox1.Image = global::SarjimBitti.Properties.Resources.arkpln;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(360, 415);

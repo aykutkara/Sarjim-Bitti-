@@ -7881,7 +7881,7 @@
   </data>
   <data name="lbl_aciklama.Text" xml:space="preserve">
     <value>Oyun başladığında oyuncu 7 çubuk kapasiteli bir pile sahiptir. 
-Oyuncudan katagorisi ve kaç harften oluştuğu bilinen kelimeyi bulması istenir.
+Oyuncudan kategorisi ve kaç harften oluştuğu bilinen kelimeyi bulması istenir.
 Oyuncu tek tek harf tahmini yapar, bilemediği ilk ve son harf için 2,
 diğer bilemediği harfler için 1 çubuk şarj eksilir. Eğer şarjı bitirmeden kelimeyi bulursa
 oyunu kazanmış olur. Fakat kelimeyi bulamadan şarjı biterse oyunu kaybeder.
