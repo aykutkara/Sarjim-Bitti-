@@ -32,6 +32,8 @@ namespace GPProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.oyuna_basla = new System.Windows.Forms.Button();
             this.nasil_oynanir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // oyuna_basla
@@ -56,6 +58,15 @@ namespace GPProje
             this.nasil_oynanir.UseVisualStyleBackColor = false;
             this.nasil_oynanir.Click += new System.EventHandler(this.nasil_oynanir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GPProje.Properties.Resources.arkpln;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(360, 415);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -64,6 +75,7 @@ namespace GPProje
             this.ClientSize = new System.Drawing.Size(358, 414);
             this.Controls.Add(this.nasil_oynanir);
             this.Controls.Add(this.oyuna_basla);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -71,6 +83,7 @@ namespace GPProje
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ŞARJIM BİTTİ !!";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,6 +92,7 @@ namespace GPProje
 
         private System.Windows.Forms.Button oyuna_basla;
         private System.Windows.Forms.Button nasil_oynanir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -103,9 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nasil_oynanir4.ico" />
+    <None Include="Resources\arkpln.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
