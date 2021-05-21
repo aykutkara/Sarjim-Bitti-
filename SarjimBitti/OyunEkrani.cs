@@ -18,7 +18,7 @@ namespace SarjimBitti
 
         }
 
-        public static string str; //bu değişkeni, "KelimeVeKatagori" metodundaki "secilenkelime" değişkenini "Islemler" metoduna taşıyabilmek için oluşturduk.
+        public static string str; //bu değişkeni, "KelimeVeKategori" metodundaki "secilenkelime" değişkenini "Islemler" metoduna taşıyabilmek için oluşturduk.
         public static char[] kelimeuzunlugu;//bu char dizisini,secilen kelimenin uzunluğu kadar label da "_" koymak için oluşturduk.
         public int sayac;//bu değişkeni, "kelimeuzunluğu" değişkeninin uzunluğuna eşitleyip kullanıcı her bildiğinde azaltıp oyunu kazanıp kazanmadığını kontrol etmek için oluşturduk.
         int pilcubugu = 6;//bu değişkeni, kullanıcı her yanlış tahmin yaptığında pil görselindeki çubuğu azaltmak için oluşturduk.
@@ -28,25 +28,25 @@ namespace SarjimBitti
         /// </summary>
         public void KelimeVeKategori()
         {
-            string[,] katagorivekelimeler = new string[3, 7] //bu dizide, katagori ve kelimeleri belirledik.(0-7 arası şehirler, 1-7 arası ülkeler, 2-7 arası araba markaları)
+            string[,] kategorivekelimeler = new string[3, 7] //bu dizide, kategori ve kelimeleri belirledik.(0-7 arası şehirler, 1-7 arası ülkeler, 2-7 arası araba markaları)
             {
                 { "ANKARA", "İSTANBUL", "İZMİR", "BURSA", "BALIKESİR", "CANAKKALE", "KONYA" ,} ,
                 {"TÜRKİYE","ALMANYA","AMERİKA","İSPANYA","İTALYA","YUNANİSTAN","RUSYA" } ,
                 { "FORD", "FIAT", "PEUGEOT", "MERCEDES", "VOLVO", "HONDA", "AUDI" }
             };
 
-            Random rnd = new Random(); // Random sınıfındaki bu örneği kelime ve katagoriyi rastgele seçmek için oluşturduk.
+            Random rnd = new Random(); // Random sınıfındaki bu örneği kelime ve kategoriyi rastgele seçmek için oluşturduk.
             int kelime = rnd.Next(0, 7); //bu değişkeni, rastgele seçilecek olan kelimenin dizinin kaçıncı elemanı olacağını belirlemek için oluşturduk.
-            int kategori = rnd.Next(0, 3);//bu değişkeni, rastgele seçilecek olan katagorinin dizinin kaçıncı elemanı olacağını belirlemek için oluşturduk.
+            int kategori = rnd.Next(0, 3);//bu değişkeni, rastgele seçilecek olan ketegorinin dizinin kaçıncı elemanı olacağını belirlemek için oluşturduk.
             lbl_kelime.Text = "";//metodu çağırdığımızda "lbl_kelime" nin textinde hiç bişey yazmasın diye yazdık.
             string secilenkelime = "";//bu değişkeni, random olarak seçilecek kelimeye atamak için oluşturduk.
             lbl_girilenharfler.Text = "";//metodu çağırdığımızda "lbl_girilenharfler" in textinde hiç bişey yazmasın diye yazdık.
 
             if (kategori == 0)//random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
+                secilenkelime = kategorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "kategorivekelimeler" dizisindeki değere atıyoruz.
                 lbl_kategori.Text = "Bu Bir Şehir";//bu if bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
-                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
+                kelimeuzunlugu = new char[kategorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
                 for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
@@ -60,11 +60,11 @@ namespace SarjimBitti
                 }
 
             }
-            else if (kategori == 1)//random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
+            else if (kategori == 1)//random olarak seçilen sayıya göre kategoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
+                secilenkelime = kategorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "kategorivekelimeler" dizisindeki değere atıyoruz.
                 lbl_kategori.Text = "Bu Bir Ülke";//bu else if bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
-                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
+                kelimeuzunlugu = new char[kategorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
                 for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
@@ -79,9 +79,9 @@ namespace SarjimBitti
             }
             else //random olarak seçilen sayıya göre katagoriyi belirlemek için oluşturduk(0 ise şehir , 1 ise ülke , 2 ise araba markası)
             {
-                secilenkelime = katagorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "katagorivekelimeler" dizisindeki değere atıyoruz.
+                secilenkelime = kategorivekelimeler[kategori, kelime];//"secilenkelime" değişkenini random olarak ayarladığımız "kategori" ve "kelime" değerlerininden yararlanarak "kategorivekelimeler" dizisindeki değere atıyoruz.
                 lbl_kategori.Text = "Bu Bir Araba Markası";//bu else bloğuna girdiği için ""lbl_kategori" nin textini değiştiriyoruz.
-                kelimeuzunlugu = new char[katagorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
+                kelimeuzunlugu = new char[kategorivekelimeler[kategori, kelime].Length];//"kelimeuzunlugu" dizisinin boyutunu seçilen kelimenin uzunluğuna eşitliyoruz.
                 sayac = kelimeuzunlugu.Length;
 
                 for (int i = 0; i < kelimeuzunlugu.Length; i++)//bu döngüyü,kelimenin harflerini "_" ye çevirmek için oluşturduk.
